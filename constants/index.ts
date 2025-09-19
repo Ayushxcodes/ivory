@@ -75,8 +75,8 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
-    { label: "Phone", value: "+91 98765 43210" },
-    { label: "Email", value: "info@ivorytours.com" },
+    { label: "Phone", value: "+91 98647 67697" },
+    { label: "Email", value: "info@ivorytoursandtravels.in" },
     { label: "Address", value: "123 Travel Lane, Adventure City, India" },
   ],
 };
