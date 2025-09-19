@@ -8,9 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        yellow: {
-          50: "#30AF5B",
-          90: "#292C27",
+        // Brand Colors for Ivory Tours and Travels
+        ivory: {
+          50: "#FFF8E7", // light ivory
+          100: "#FEEFB3", // primary accent
+          200: "#FEC601", // secondary accent
+          900: "#292C27", // dark
+        },
+        green: {
+          50: "#30AF5B", // accent green
         },
         gray: {
           10: "#EEEEEE",
@@ -25,9 +31,6 @@ module.exports = {
         blue: {
           70: "#021639",
         },
-        yellow: {
-          50: "#FEC601",
-        },
       },
       backgroundImage: {
         "bg-img-1": "url('/img-1.png')",
@@ -38,6 +41,11 @@ module.exports = {
       },
       screens: {
         xs: "400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
         "3xl": "1680px",
         "4xl": "2200px",
       },
