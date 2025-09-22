@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flexCenter bg-gray-10 py-16">
+    <footer id="contact" className="flexCenter bg-gray-10 py-16">
       <div className="padding-container max-container flex w-full flex-col gap-14">
         {/* Top Section */}
         <div className="flex flex-col items-start justify-between gap-14 md:flex-row md:items-start">

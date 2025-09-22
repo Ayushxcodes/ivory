@@ -1,10 +1,8 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
-  { href: "/how-it-works", key: "how_it_works", label: "How It Works" },
-  { href: "/destinations", key: "destinations", label: "Destinations" },
   { href: "/tours", key: "tours", label: "Tours" },
-  { href: "/contact", key: "contact_us", label: "Contact Us" },
+  { href: "#contact", key: "contact_us", label: "Contact Us" },
 ];
 
 // CAMP / PEOPLE SECTION (travelers joined)
@@ -32,11 +30,11 @@ export const FEATURES = [
       "Plan your adventures with ease. Customize schedules, activities, and tours for a seamless travel experience.",
   },
   {
-    title: "Augmented Reality Assistance",
-    icon: "/tech.svg",
+    title: "Guided Tours & Packages",
+    icon: "/tech.svg", // 👉 you can add this icon in public folder
     variant: "yellow",
     description:
-      "Use AR technology to explore destinations, find landmarks, and get instant guidance during your travels.",
+      "Choose from curated tour packages with local guides, ensuring you enjoy authentic experiences without any hassle.",
   },
   {
     title: "Discover New Destinations",
@@ -46,6 +44,7 @@ export const FEATURES = [
       "We continuously update our list of destinations worldwide, helping you find hidden gems and popular spots.",
   },
 ];
+
 
 // FOOTER LINKS
 export const FOOTER_LINKS = [

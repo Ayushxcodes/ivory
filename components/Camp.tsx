@@ -4,19 +4,19 @@ import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-interface CampProps {
+interface DestinationProps {
   backgroundImage: string;
   title: string;
   subtitle: string;
   peopleJoined: string;
 }
 
-const CampSite = ({
+const DestinationCard = ({
   backgroundImage,
   title,
   subtitle,
   peopleJoined,
-}: CampProps) => {
+}: DestinationProps) => {
   return (
     <motion.div
       variants={{
@@ -30,7 +30,7 @@ const CampSite = ({
       className={`relative h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat bg-animate lg:rounded-r-5xl 2xl:rounded-5xl`}
     >
       <div className="relative z-10 flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
-        {/* Top part */}
+        {/* Top content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +39,7 @@ const CampSite = ({
           className="flexCenter gap-4"
         >
           <div className="rounded-full bg-yellow-50 p-4">
-            <Image src="/folded-map.svg" alt="map" width={28} height={28} />
+            <Image src="/location.svg" alt="map" width={28} height={28} />
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="bold-18 text-white">{title}</h4>
@@ -47,7 +47,7 @@ const CampSite = ({
           </div>
         </motion.div>
 
-        {/* Bottom part */}
+        {/* Bottom content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ const CampSite = ({
                 <Image
                   className="inline-block h-10 w-10 rounded-full"
                   src={url}
-                  alt="person"
+                  alt="traveler"
                   width={52}
                   height={52}
                 />
@@ -83,26 +83,26 @@ const CampSite = ({
   );
 };
 
-const Camp = () => {
+const Destinations = () => {
   return (
     <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
-      {/* Camps scrollable section */}
+      {/* Scrollable destinations */}
       <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]">
-        <CampSite
+        <DestinationCard
           backgroundImage="bg-bg-img-1"
-          title="Putuk Truno Camp"
-          subtitle="Prigen, Pasuruan"
-          peopleJoined="50+ Joined"
+          title="Santorini Escape"
+          subtitle="Greece, Mediterranean Bliss"
+          peopleJoined="Join+ Travelers"
         />
-        <CampSite
+        <DestinationCard
           backgroundImage="bg-bg-img-2"
-          title="Mountain View Camp"
-          subtitle="Somewhere in the Wilderness"
-          peopleJoined="50+ Joined"
+          title="Swiss Alps Journey"
+          subtitle="Switzerland, Scenic Peaks"
+          peopleJoined="Travelers++"
         />
       </div>
 
-      {/* Bottom info card */}
+      {/* Info card */}
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -112,25 +112,18 @@ const Camp = () => {
       >
         <div className="relative w-full overflow-hidden rounded-3xl bg-yellow-50 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20">
           <h2 className="regular-24 md:regular-32 2xl:regular-64 capitalize text-white">
-            <strong>Feeling Lost</strong> And Not Knowing The Way?
+            <strong>Ivory Tours</strong> – Your Gateway to the World
           </h2>
           <p className="regular-14 xl:regular-16 mt-5 text-white">
-            Starting from the anxiety of the climbers when visiting a new
-            climbing location, the possibility of getting lost is very large.
-            That's why we are here for those of you who want to start an
-            adventure
+            Whether it's a romantic getaway, an adventurous trek, or a family
+            vacation, Ivory Tours & Travels curates personalized journeys just
+            for you. Travel stress-free with our expert planning, guided tours,
+            and unforgettable experiences across the globe.
           </p>
-          <Image
-            src="/quote.svg"
-            alt="camp-2"
-            width={186}
-            height={219}
-            className="camp-quote"
-          />
         </div>
       </motion.div>
     </section>
   );
 };
 
-export default Camp;
+export default Destinations;
